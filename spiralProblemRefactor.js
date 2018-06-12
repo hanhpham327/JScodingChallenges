@@ -1,24 +1,14 @@
-function printGrid(grid){
-    // printGrid takes in 1 parameter which is a number from the range 1 to infinite
-    // this is to just display the grid at the end
-    for (var i=0;i<grid.length;i++){
-        console.log(grid[i].join(' '))
-        //printing out each row = grid at i which will show on the console
-        // join removes the array and have the values seprated by ' '
-    }
-}
-
 
 function create2dGrid(size){
-    let i =size;
     const grid=[];
-    // create a grid which is an empty array as container
-    for (i;i>0;i--){
-        // can also write it like while (i--) grid.push(new Array(size)) return grid
-        // creates 1 array (row) and pushes in "size" values in it
-        grid.push(new Array(size))
-    
+    for (var i=0;i<grid.length;i++){
+        grid.push()
+        console.log(grid[i].join(' '))
+        for (var k;i>0;i--){
+            grid[i].push()        
+        }   
     }
+    
  
         // loop is to insert what the length of the array is based on the size parameter
         // when i is less than 0 we will return the grid
@@ -66,5 +56,4 @@ function createSpiral(n){
 
 
 
-printGrid(createSpiral(2))
 printGrid(createSpiral(5))
